@@ -21,6 +21,8 @@ This is a multi-component AI project developed during my internship. It integrat
   - Daily new cases
   - Cumulative case trends by country
   - Raw data display for selected country
+    
+📄 The WHO COVID dataset is large and may not preview in GitHub, but it is included in the repository and used directly by the Streamlit app.
 
 ---
 📦 **Note:** The model file (`covid_xray_model.keras`) is too large for GitHub.
