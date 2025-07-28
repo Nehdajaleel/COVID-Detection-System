@@ -13,6 +13,17 @@ This is a multi-component AI project developed during my internship. It integrat
   - **Normal**
   - **Viral Pneumonia**
 - Powered by a deep learning model (`covid_xray_model.keras`) built using TensorFlow/Keras.
+  
+## 🧪 Sample Test Image
+
+You can test the model using sample chest X-ray images provided in the `sample_xrays/` folder.
+
+To test:
+1. Go to the **🩻 X-ray Classifier** tab in the app
+2. Upload one of the sample images:
+   - `covid.jpeg`
+   - `normal.jpg`
+   - `pneumonia.jpeg`
 
 ### 2. 📊 WHO COVID-19 Global Data Analysis
 - Uses official WHO dataset (`WHO-COVID-19-global-data.csv`)
