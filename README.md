@@ -35,6 +35,10 @@ To test:
     
 📄 The WHO COVID dataset is large and may not preview in GitHub, but it is included in the repository and used directly by the Streamlit app.
 
+## 🗒️ Notebooks
+
+The training and data analysis process is documented in the `notebooks/` folder.
+
 ---
 📦 **Note:** The model file (`covid_xray_model.keras`) is too large for GitHub.
 
