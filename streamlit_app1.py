@@ -4,6 +4,8 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import matplotlib.pyplot as plt
+from tensorflow import keras
+model = keras.models.load_model("covid_xray_model.keras")  # or model.h5 if that's your file
 
 # ------------------------- PAGE CONFIG -------------------------
 st.set_page_config(page_title="COVID-19 AI System", layout="centered")
