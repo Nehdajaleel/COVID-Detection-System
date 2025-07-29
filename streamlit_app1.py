@@ -4,8 +4,19 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import matplotlib.pyplot as plt
+import os
+import requests
 from tensorflow import keras
-model = keras.models.load_model("covid_xray_model.keras")  # or model.h5 if that's your file
+
+# --- Step 1: Download the model from Google Drive if not already present ---
+if not os.path.exists("covid_xray_model.keras"):
+    url = "https://drive.google.com/uc?id=YOUR_FILE_ID"  # 🔁 Replace with your actual file ID
+    response = requests.get(url)
+    with open("covid_xray_model.keras", "wb") as f:
+        f.write(response.content)
+
+# --- Step 2: Load the model ---
+model = keras.models.load_model("covid_xray_model.keras")
 
 # ------------------------- PAGE CONFIG -------------------------
 st.set_page_config(page_title="COVID-19 AI System", layout="centered")
