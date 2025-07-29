@@ -10,13 +10,14 @@ import gdown
 from tensorflow import keras
 
 # Download model if not exists
+model_path = "covid_xray_model.keras"
 if not os.path.exists("covid_xray_model.keras"):
-    file_id = "1CZ0Saujk9J6DfnZlOvdAp-EakWuasWfE"  # replace with your actual file ID
+    file_id = "1_0XFALZS4yi-bZ2kES0THbZpWJSbXo9E"  # replace with your actual file ID
     url = f"https://drive.google.com/uc?id={file_id}"
     gdown.download(url, "covid_xray_model.keras", quiet=False)
 
 # Load the model
-model = keras.models.load_model("covid_xray_model.keras")
+model = keras.models.load_model(model_path)
 
 
 # ------------------------- PAGE CONFIG -------------------------
