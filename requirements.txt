@@ -4,3 +4,5 @@ keras
 pandas
 numpy
 matplotlib
+scikit-learn
+pillow
