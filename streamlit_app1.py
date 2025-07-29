@@ -10,7 +10,7 @@ from tensorflow import keras
 
 # --- Step 1: Download the model from Google Drive if not already present ---
 if not os.path.exists("covid_xray_model.keras"):
-    url = "https://drive.google.com/uc?id=YOUR_FILE_ID"  # 🔁 Replace with your actual file ID
+    url = "https://drive.google.com/uc?id=1CZ0Saujk9J6DfnZlOvdAp-EakWuasWfE"  # 🔁 Replace with your actual file ID
     response = requests.get(url)
     with open("covid_xray_model.keras", "wb") as f:
         f.write(response.content)
