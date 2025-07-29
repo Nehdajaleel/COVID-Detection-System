@@ -4,19 +4,20 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import matplotlib.pyplot as plt
+# install gdown first
 import os
-import requests
+import gdown
 from tensorflow import keras
 
-# --- Step 1: Download the model from Google Drive if not already present ---
+# Download model if not exists
 if not os.path.exists("covid_xray_model.keras"):
-    url = "https://drive.google.com/uc?id=1CZ0Saujk9J6DfnZlOvdAp-EakWuasWfE"  # 🔁 Replace with your actual file ID
-    response = requests.get(url)
-    with open("covid_xray_model.keras", "wb") as f:
-        f.write(response.content)
+    file_id = "YOUR_FILE_ID"  # replace with your actual file ID
+    url = f"https://drive.google.com/uc?id={1CZ0Saujk9J6DfnZlOvdAp-EakWuasWfE}"
+    gdown.download(url, "covid_xray_model.keras", quiet=False)
 
-# --- Step 2: Load the model ---
+# Load the model
 model = keras.models.load_model("covid_xray_model.keras")
+
 
 # ------------------------- PAGE CONFIG -------------------------
 st.set_page_config(page_title="COVID-19 AI System", layout="centered")
